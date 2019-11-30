@@ -86,7 +86,7 @@ const prod = [  {
         <li> ${prod.desc2} </li>
         <li> ${prod.desc3} </li>
       </ul>
-      <div class="info-img">
+      <div class="info-img element">
           <a href="${prod.link}">
             <img src="img/more-info.svg" alt="More info">
           </a>
@@ -101,4 +101,14 @@ function renderList(arr) {
     const strHtmlItems = arrHtmlProducts.join(`\n`)
     document.getElementById(`products`).innerHTML += strHtmlItems;
   }
-renderList(prod)
+
+  renderList(prod)
+
+
+
+
+
+
+
+
+

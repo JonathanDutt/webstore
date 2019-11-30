@@ -79,6 +79,17 @@ h5{
   line-height: 2;
 }
 
+.navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.navigation a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+.item-inline .icon {
+    display: none;
+  }
 /* menubar classes */
 
 .copy-wrapper {
@@ -186,6 +197,14 @@ h5{
 .unavailable{
   border-left: 1em solid red;
 }
+.element{
+
+}
+.element:hover{
+    background-color: black;
+    background-position: right;
+    background-size: 1em;
+}
 /* Footer */
 
 @media screen and (min-width: 320px){
@@ -253,6 +272,7 @@ h5{
   }
 }
 @media screen and (min-width: 600px){
+
   header {
     font-size: 120%;
   }
