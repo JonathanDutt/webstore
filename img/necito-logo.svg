@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Necito_Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8" transform="translate(-12.000000, -26.000000)">
+            <g id="Necito_Logo" transform="translate(14.000000, 28.000000)">
+                <g id="Group" transform="translate(8.000000, 0.000000)">
+                    <g id="Layer4_0_FILL-link" fill="#B7B5B5" fill-rule="nonzero">
+                        <g id="Layer4_0_FILL">
+                            <polygon id="Shape" points="0 0.0214084507 0 15.4716197 8 19 8 2.9878169"></polygon>
+                        </g>
+                    </g>
+                    <g id="Layer4_0_1_STROKES-link" stroke="#B7B5B5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.9">
+                        <polygon id="Layer4_0_1_STROKES" points="8 19 8 2.9878169 0 0.0214084507 0 15.4716197"></polygon>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(7.000000, 4.000000)" fill="#8E8E8E" fill-rule="nonzero">
+                    <g id="Layer2_0_FILL-link">
+                        <g id="Layer2_0_FILL">
+                            <path d="M0.071559633,12.0107023 C0.137614679,12.1828317 0.25733945,12.3076923 0.430733945,12.3852843 L8.38486239,15.9130435 C8.55733945,15.9897436 8.73256881,15.9959866 8.91055046,15.9317726 C8.93623853,15.9219621 8.96100917,15.9112598 8.98486239,15.8996656 L8.16330275,14.3451505 L1.36100917,0.00133779264 L0.71559633,11.1063545 C0.635779817,11.1063545 0.555963303,11.1210702 0.476146789,11.1505017 C0.298165138,11.2147157 0.169724771,11.3311037 0.0908256881,11.4996656 C0.0110091743,11.6673356 0.00458715596,11.8376812 0.071559633,12.0107023 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group" transform="translate(0.000000, 1.000000)">
+                    <g id="Layer1_0_FILL-link" fill="#595757" fill-rule="nonzero">
+                        <g id="Layer1_0_FILL">
+                            <polygon id="Shape" points="0 0.0227464789 0 15.4582394 8 18.9826056 8 2.98915493"></polygon>
+                        </g>
+                    </g>
+                    <g id="Layer1_0_1_STROKES-link" stroke="#595757" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.9">
+                        <polygon id="Layer1_0_1_STROKES" points="0 0.0227464789 8 2.98915493 8 18.9826056 0 15.4582394"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
