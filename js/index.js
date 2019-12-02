@@ -103,15 +103,17 @@ function renderList(arr) {
     document.getElementById(`products`).innerHTML += strHtmlItems;
   }
 
+
+  renderList(prod)
+
+
 //   const midPoint = [5000]
 
 // funtion lessThenMid(prod.price){
 //   return prod.price < midPoint;
 // }
-  renderList(prod)
 
-
-
+document.getElementById(`layout`)
 
 
 
