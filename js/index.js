@@ -32,7 +32,7 @@
 const prod = [  {
     class:`grey-packages`,
     name: `Gold Package`,
-    price: 2500,
+    price: 2499,
     guests: `200-400`,
     desc0: ``,
     desc1: `DJ services from 6PM to 1AM`,
@@ -43,7 +43,7 @@ const prod = [  {
   }, {
     class:`dark-packages`,  
     name: `Diamond Package`,
-    price: 5000,
+    price: 4999,
     guests: `400-700`,
     desc0: `Gold Package`,
     desc1: `DJ services from 6PM to 1AM`,
@@ -54,7 +54,7 @@ const prod = [  {
   }, {
     class:`grey-packages`,   
     name: `Platinum Package`,
-    price: 7500,
+    price: 7499,
     guests: `700-1000`,
     desc0: `Gold Package`,
     desc1: `DJ services from 6PM to 1AM`,
@@ -65,7 +65,7 @@ const prod = [  {
  }, {
     class:`dark-packages`,  
     name: `Obsidian Package`,
-    price: 5000,
+    price: 9999,
     guests: `1000-1500`,
     desc0: `Gold Package`,
     desc1: `DJ services from 6PM to 1AM`,
@@ -91,6 +91,7 @@ const prod = [  {
             <img src="img/more-info.svg" alt="More info">
           </a>
       </div>
+      <div class="product-cost">${prod.price}</div>
     </div>
   </article>`;
   }
@@ -102,7 +103,13 @@ function renderList(arr) {
     document.getElementById(`products`).innerHTML += strHtmlItems;
   }
 
+//   const midPoint = [5000]
+
+// funtion lessThenMid(prod.price){
+//   return prod.price < midPoint;
+// }
   renderList(prod)
+
 
 
 
