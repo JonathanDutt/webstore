@@ -54,6 +54,7 @@ const prod = [  {
     desc1: `16 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 560X 4 GB`,
     desc3: ``,
+    size: `13`,
     category:  `low`,
     link: `#`,
   }, {
@@ -65,6 +66,7 @@ const prod = [  {
     desc1: `16 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 570X 4 GB`,
     desc3: ``,
+    size: `14`,
     category:  `available`,
     link: `#`
   }, {
@@ -76,6 +78,7 @@ const prod = [  {
     desc1: `16 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 560X 4 GB`,
     desc3: ``,
+    size: `13`,
     category:  `low`,
     link: `#`,
   }, {
@@ -87,6 +90,7 @@ const prod = [  {
     desc1: `16 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 570X 4 GB`,
     desc3: ``,
+    size: `14`,
     category:  `available`,
     link: `#`
   },{
@@ -98,6 +102,7 @@ const prod = [  {
     desc1: `16 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 580X 4 GB`,
     desc3: ``,
+    size: `15`,
     category:  `low`,
     link: `#`,
  }, {
@@ -109,6 +114,7 @@ const prod = [  {
     desc1: `32 GB 2400 MHz DDR4`,
     desc2: `Radeon Pro 580X 4 GB`,
     desc3: ``,
+    size: `15`,
     category:  `unavailable`,
     link: `#`,
   }];
@@ -147,7 +153,7 @@ function renderList(arr) {
 
   function getAccesAsHtmlString(acces) {
     let greatDeal = ``;
-    if (acces.price < 2000) {
+    if (acces.price < 2400) {
       greatDeal = `<small class="callout">Great Deal!</small>`;
     }
     return `<article class="packages-wrapper" >
@@ -201,6 +207,15 @@ console.table(arrProductNamecheck);
 }
 
 
+function filterByCat(acces) {
+  // When a parameter it sent to a filter, it gets stored as "this"
+  return acces.size == this;
+}
+function searchByCat(event) {
+  const searchTerm = event.target.value; // From the dropdown/select field
+  const arrCatCheck = acces.filter(filterByCat, searchTerm)
+  renderAccess(arrCatCheck);
+}
 
 
 
@@ -214,7 +229,7 @@ renderAccess(acces);
 
 
 
-
+document.getElementById('catSearch').addEventListener('change', searchByCat)
 document.getElementById(`nameSearch`).addEventListener('input', searchByName)
 document.getElementById(`nameProductSearch`).addEventListener('input', searchProductByName)
 
