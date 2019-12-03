@@ -8,6 +8,7 @@ const prod = [  {
     desc1: `DJ services from 6PM to 1AM`,
     desc2: `4 speaker JBL sound system`,
     desc3: `possible to add options`,
+    size: `gold`,
     category:  `low`,
     link: `#`,
   }, {
@@ -19,6 +20,7 @@ const prod = [  {
     desc1: `DJ services from 6PM to 1AM`,
     desc2: `2 side fill surround sound speakers`,
     desc3: `2 wireless microphones and more!`,
+    size: `dia`,
     category:  `available`,
     link: `product.html`
   }, {
@@ -30,6 +32,7 @@ const prod = [  {
     desc1: `DJ services from 6PM to 1AM`,
     desc2: `2 side fill surround sound speakers`,
     desc3: `2 wireless microphones and more!`,
+    size: `plat`,
     category:  `low`,
     link: `#`,
  }, {
@@ -41,6 +44,7 @@ const prod = [  {
     desc1: `DJ services from 6PM to 1AM`,
     desc2: `2 side fill surround sound speakers`,
     desc3: `2 wireless microphones and more!`,
+    size: `obsidian`,
     category:  `unavailable`,
     link: `#`,
   }];
@@ -216,6 +220,17 @@ function searchByCat(event) {
   const arrCatCheck = acces.filter(filterByCat, searchTerm)
   renderAccess(arrCatCheck);
 }
+function filterPackageByCat(prod) {
+  // When a parameter it sent to a filter, it gets stored as "this"
+  return prod.size == this;
+}
+function searchPackageByCat(event) {
+  const searchPackageTerm = event.target.value; // From the dropdown/select field
+  const arrPackageCatCheck = prod.filter(filterPackageByCat, searchPackageTerm)
+  renderList(arrPackageCatCheck);
+  console.log(arrPackageCatCheck);
+  
+}
 
 
 
@@ -228,7 +243,7 @@ renderAccess(acces);
 
 
 
-
+document.getElementById('catPackageSearch').addEventListener('change', searchPackageByCat)
 document.getElementById('catSearch').addEventListener('change', searchByCat)
 document.getElementById(`nameSearch`).addEventListener('input', searchByName)
 document.getElementById(`nameProductSearch`).addEventListener('input', searchProductByName)

@@ -53,6 +53,15 @@
           <h3>Check out the options we have for you. We adapt to your event. Here are our most popular packages </h3>
           <p>Available: <a href="#" class="available"></a>  Low: <a href="#" class="low"></a> Unavailable: <a href="#" class="unavailable"></a></p>
           <h2>Filters</h2>
+          <label for="catPackageSerch">Package Category:</label>
+          <select name="categoryPackageName" id="catPackageSearch">
+            <option value="prod" disabled selected>-- Select a size --</option>
+            <option value="#">All</option>
+            <option value="gold">Gold</option>
+            <option value="dia">Diamond</option>
+            <option value="plat">Platinum</option>
+            <option value="obsidian">Obsidian</option>
+          </select>
           <form action=""><label for="nameSearch">Package name:</label>
             <input type="search" name="productName" id="nameSearch"></form>
         </div>
@@ -63,9 +72,10 @@
         <div class="copy-wrapper">
         <h2>Accessories</h2>
         <h3>If you're just looking for some DJ accessories. We got a lot of accessories Here are our most popular accessories </h3>
+        <label for="catSerch">Accessories:</label>
         <select name="categoryName" id="catSearch">
             <option value="0" disabled selected>-- Select a size --</option>
-            <option value="13">All</option>
+            <option value="0">All</option>
             <option value="13">13"</option>
             <option value="14">14"</option>
             <option value="15">15"</option>
