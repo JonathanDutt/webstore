@@ -1,33 +1,3 @@
-// let prod0 = {
-//     name: `Gold Package`,
-//     code: `INTR 2016`,
-//     inst: `Ryan Bailey`,
-//     start: `Fall 2019`,
-//     weeks: 15,
-//     breaks: true,
-//     duration: `3hr, 0 min`
-//   }
-  
-//   let prod1 = {
-//     name: `Diamond Package`,
-//     code: `INTR 2012`,
-//     inst: `Rocco`,
-//     start: `Fall 2019`,
-//     weeks: 15,
-//     breaks: true,
-//     duration: `3hr, 0 min`
-//   }
-  
-  
-//   let prod2 = {
-//     name: `Platinum Package`,
-//     code: `INTR 20132`,
-//     inst: `Rocco`,
-//     start: `Fall 2019`,
-//     weeks: 15,
-//     breaks: true,
-//     duration: `3hr, 0 min`
-//   }
 
 const prod = [  {
     class:`grey-packages`,
@@ -36,8 +6,8 @@ const prod = [  {
     guests: `200-400`,
     desc0: ``,
     desc1: `DJ services from 6PM to 1AM`,
-    desc2: `4 speaker JBL sound system (inside main hall)`,
-    desc3: ``,
+    desc2: `4 speaker JBL sound system`,
+    desc3: `possible to add options`,
     category:  `low`,
     link: `#`,
   }, {
@@ -75,10 +45,82 @@ const prod = [  {
     link: `#`,
   }];
 
+  const acces = [  {
+    class:`grey-packages`,
+    name: `Macbook Pro 13"`,
+    price: 1799,
+    specs: `macOS Catalina `,
+    desc0: `intel I5 2.6 GHz`,
+    desc1: `16 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 560X 4 GB`,
+    desc3: ``,
+    category:  `low`,
+    link: `#`,
+  }, {
+    class:`dark-packages`,  
+    name: `Macbook Pro 14"`,
+    price: 1999,
+    specs: `macOS Catalina `,
+    desc0: `intel I7 2.4 GHz`,
+    desc1: `16 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 570X 4 GB`,
+    desc3: ``,
+    category:  `available`,
+    link: `#`
+  }, {
+    class:`grey-packages`,
+    name: `Macbook Pro 13"`,
+    price: 2199,
+    specs: `macOS Catalina `,
+    desc0: `intel I7 2.8 GHz`,
+    desc1: `16 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 560X 4 GB`,
+    desc3: ``,
+    category:  `low`,
+    link: `#`,
+  }, {
+    class:`dark-packages`,  
+    name: `Macbook Pro 14"`,
+    price: 2299,
+    specs: `macOS Catalina `,
+    desc0: `intel I9 2.6 GHz`,
+    desc1: `16 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 570X 4 GB`,
+    desc3: ``,
+    category:  `available`,
+    link: `#`
+  },{
+    class:`grey-packages`,   
+    name: `Macbook Pro 15"`,
+    price: 2599,
+    specs: `macOS Catalina `,
+    desc0: `intel I7 2.6 GHz`,
+    desc1: `16 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 580X 4 GB`,
+    desc3: ``,
+    category:  `low`,
+    link: `#`,
+ }, {
+    class:`dark-packages`,  
+    name: `Macbook Pro 15"`,
+    price: 2799,
+    specs: `macOS Catalina `,
+    desc0: `intel I9 2.9 GHz`,
+    desc1: `32 GB 2400 MHz DDR4`,
+    desc2: `Radeon Pro 580X 4 GB`,
+    desc3: ``,
+    category:  `unavailable`,
+    link: `#`,
+  }];
+
  function getProductsAsHtmlString(prod) {
-    return `<article class="${prod.class} ${prod.category}" >
-    <div class="product-wrapper">
-      <h4>${prod.name} </h4>
+  let greatPackageDeal = ``;
+  if (prod.price < 5000) {
+    greatPackageDeal = `<small class="callout">Great Deal!</small>`;
+  }
+    return `<article class="packages-wrapper" >
+    <div class="${prod.class} ${prod.category}">
+      <h4>${prod.name} ${greatPackageDeal} </h4>
       <ul class="prod-desc">
         <li> ${prod.guests} Guests </li>
         <li> ${prod.desc1} </li>
@@ -100,20 +142,85 @@ function renderList(arr) {
   
     const arrHtmlProducts = arr.map(getProductsAsHtmlString);
     const strHtmlItems = arrHtmlProducts.join(`\n`)
-    document.getElementById(`products`).innerHTML += strHtmlItems;
+    document.getElementById(`packages`).innerHTML = strHtmlItems;
+  }
+
+  function getAccesAsHtmlString(acces) {
+    let greatDeal = ``;
+    if (acces.price < 2000) {
+      greatDeal = `<small class="callout">Great Deal!</small>`;
+    }
+    return `<article class="packages-wrapper" >
+    <div class="${acces.class} ${acces.category}">
+      <h4>${acces.name} ${greatDeal} </h4>
+      <ul class="prod-desc">
+        <li>OS: ${acces.specs}  </li>
+        <li>Processor: ${acces.desc1} </li>
+        <li>Memory: ${acces.desc0} </li>
+        <li>Graphics: ${acces.desc2} </li>
+        <li> ${acces.desc3} </li>
+      </ul>
+      <div class="info-img element">
+          <a href="${acces.link}">
+            <img src="img/more-info.svg" alt="More info">
+          </a>
+      </div>
+      <div class="product-cost">${acces.price}</div>
+    </div>
+  </article>`;
+  }
+
+function renderAccess(arr) {
+  
+    const arrHtmlAccess = arr.map(getAccesAsHtmlString);
+    const strHtmlItems = arrHtmlAccess.join(`\n`)
+    document.getElementById(`accessories`).innerHTML = strHtmlItems;
   }
 
 
-  renderList(prod)
 
 
-//   const midPoint = [5000]
 
-// funtion lessThenMid(prod.price){
-//   return prod.price < midPoint;
-// }
+function filterByName(prod) {
+  return prod.name.toLowerCase().includes(this)
+}
+function searchByName(event){
+const searchTerm = event.target.value;
+const arrNamecheck = prod.filter(filterByName, searchTerm);
+renderList(arrNamecheck);
+// console.table(arrNamecheck);
+}
+function filterProductByName(acces) {
+  return acces.name.toLowerCase().includes(this)
+}
+function searchProductByName(event){
+const searchProductTerm = event.target.value;
+const arrProductNamecheck = acces.filter(filterProductByName, searchProductTerm);
+renderAccess(arrProductNamecheck);
+console.table(arrProductNamecheck);
+}
 
-document.getElementById(`layout`)
+
+
+
+
+
+
+
+renderList(prod);
+renderAccess(acces);
+
+
+
+
+
+
+document.getElementById(`nameSearch`).addEventListener('input', searchByName)
+document.getElementById(`nameProductSearch`).addEventListener('input', searchProductByName)
+
+
+
+
 
 
 
